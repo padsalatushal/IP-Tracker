@@ -7,7 +7,7 @@ then
 fi 
 
 res=$(curl http://ip-api.com/json/$1 -s)
-echo $res
+#echo $res
 
 
 status=$(echo $res | jq '.status' -r)
@@ -28,7 +28,9 @@ then
 	timezone=$(echo $res | jq '.timezone' -r)
 	isp=$(echo $res | jq '.isp' -r)
 	org=$(echo $res | jq '.org' -r)
+	as=$(echo $res | jq '.as' -r)
 
+	echo "Query:::$1"
 	echo "Country:::$country ($countrycode)"
 	echo "Region:::$regionname ($region)"
 	echo "City:::$city"
@@ -36,7 +38,9 @@ then
 	echo "Timezone:::$timezone"
 	echo "Isp:::$isp"
 	echo "Org:::$org"
-
+	echo "As:::$as"
+	echo "Google Map:::https://maps.google.com/?q=$latitude,$longitude"
+	
 
 else
 	echo "invaild ip or check internet connnetion"
