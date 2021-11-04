@@ -6,7 +6,7 @@
 > A simple command line bash tool to get detail about ip address.
 > Many times you need to know details about ip-address.
 > If you find yourself in that situation then this IP-Tracker is the perfect tool for you!
-> This tool made by @Padsala Trushal
+> This tool made by @Padsala Tushal
 
 <br>
 
